@@ -1,8 +1,8 @@
 <?php
 
-namespace Sfneal\PhpPackageBoilerplate;
+namespace Sfneal\Address;
 
-class PhpPackageBoilerplate
+class Address
 {
     // Build your next great package.
 }
