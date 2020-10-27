@@ -16,7 +16,9 @@
         }
     ],
     "require": {
-        "php": ">=5.3"
+        "php": ">=7.0",
+        "sfneal/models": ">=0.3.0",
+        "sfneal/string-helpers": ">=0.2.2"
     },
     "require-dev": {
         "phpunit/phpunit": ">=4.8.36"
