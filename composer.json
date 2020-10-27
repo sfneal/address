@@ -23,6 +23,13 @@
     "require-dev": {
         "phpunit/phpunit": ">=4.8.36"
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Sfneal\\Address\\Providers\\AddressServiceProvider"
+            ]
+        }
+    },
     "autoload": {
         "psr-4": {
             "Sfneal\\Address\\": "src"
