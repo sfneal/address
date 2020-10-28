@@ -106,7 +106,7 @@ class Address extends AbstractModel
     public function setCityAttribute($value)
     {
         if (isset($value) && inString($value, ',')) {
-            [$city, $state] = explode(',', $value);
+            list($city, $state) = explode(',', $value);
             $this->attributes['city'] = ucfirst(trim($city));
             $this->setStateAttribute($state);
         } else {
