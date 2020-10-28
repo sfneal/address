@@ -37,5 +37,8 @@ class LaravelTest extends TestCase
 
         // Assert Jokes are the same
         $this->assertSame($newAddress->address_1, '123 Main Street');
+        $this->assertSame($newAddress->city, 'Boston');
+        $this->assertSame($newAddress->state, 'MA');
+        $this->assertSame($newAddress->zip, '12345');
     }
 }
