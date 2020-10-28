@@ -11,7 +11,6 @@ class Address extends AbstractModel
 {
     use CityStateAccessors;
 
-    protected $connection = 'mysql';
     protected $table = 'address';
     protected $primaryKey = 'address_id';
 
