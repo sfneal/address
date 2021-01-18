@@ -1,6 +1,7 @@
 # Address
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/address.svg?style=flat-square)](https://packagist.org/packages/sfneal/address)
+[![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/address)](https://packagist.org/packages/sfneal/address)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/.svg?style=flat-square)](https://packagist.org/packages/sfneal/address)
 [![Build Status](https://img.shields.io/travis/sfneal/address/master.svg?style=flat-square)](https://travis-ci.org/sfneal/address)
 [![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/address.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/address)
 [![Total Downloads](https://img.shields.io/packagist/dt/sfneal/address.svg?style=flat-square)](https://packagist.org/packages/sfneal/address)
