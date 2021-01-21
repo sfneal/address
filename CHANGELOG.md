@@ -15,4 +15,9 @@ All notable changes to `address` will be documented in this file
 
 
 ## 0.3.0 - 2021-01-21
-- add importing of sfneal/string-helpers helper classes to replace autoloading helper functions 
+- add importing of sfneal/string-helpers helper classes to replace autoloading helper functions
+
+
+## 0.4.0 - 2021-01-21
+- bump sfneal/array-helpers min version 
+- fix use of array-helpers helper functions. 
