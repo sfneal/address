@@ -15,7 +15,7 @@ class AddressBuilder extends QueryBuilder
      *
      * @return $this
      */
-    public function whereType(string $addressableType, string $operator = '=', string $boolean = 'and')
+    public function whereType(string $addressableType, string $operator = '=', string $boolean = 'and'): self
     {
         $this->where('addressable_type', $operator, $addressableType, $boolean);
 
@@ -29,7 +29,7 @@ class AddressBuilder extends QueryBuilder
      *
      * @return $this
      */
-    public function whereAddressLike(string $search)
+    public function whereAddressLike(string $search): self
     {
         $this->where(function (self $builder) use ($search) {
             $builder->whereLike('address_1', $search);
