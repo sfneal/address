@@ -4,6 +4,7 @@ namespace Sfneal\Address\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Address\Builders\AddressBuilder;
+use Sfneal\Helpers\Arrays\ArrayHelpers;
 use Sfneal\Helpers\Strings\StringHelpers;
 use Sfneal\Models\AbstractModel;
 use Sfneal\Models\Traits\CityStateAccessors;
@@ -123,15 +124,14 @@ class Address extends AbstractModel
     public function setStateAttribute($value)
     {
         // Check to see if a zip value was accidentally given
-        if (arrayValuesEqual(
+        if ((new ArrayHelpers(
             collect(str_split($value))
-            ->take(2)
-            ->map(function ($char) {
-                return is_int($char);
-            })
-            ->toArray(),
-            true
-        )) {
+                ->take(2)
+                ->map(function ($char) {
+                    return is_int($char);
+                })
+                ->toArray()
+        ))->arrayValuesEqual(true)) {
             $attribute = 'zip';
         } else {
             $attribute = 'state';
