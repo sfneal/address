@@ -4,6 +4,7 @@ namespace Sfneal\Address\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Sfneal\Address\Builders\AddressBuilder;
+use Sfneal\Helpers\Strings\StringHelpers;
 use Sfneal\Models\AbstractModel;
 use Sfneal\Models\Traits\CityStateAccessors;
 
@@ -105,7 +106,7 @@ class Address extends AbstractModel
      */
     public function setCityAttribute($value)
     {
-        if (isset($value) && inString($value, ',')) {
+        if (isset($value) && (new StringHelpers($value))->inString(',')) {
             [$city, $state] = explode(',', $value);
             $this->attributes['city'] = ucfirst(trim($city));
             $this->setStateAttribute($state);
