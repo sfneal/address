@@ -6,7 +6,7 @@ use Orchestra\Testbench\TestCase;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Providers\AddressServiceProvider;
 
-class LaravelTest extends TestCase
+class AddressMigrationTest extends TestCase
 {
     protected function getPackageProviders($app)
     {
