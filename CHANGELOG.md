@@ -19,5 +19,10 @@ All notable changes to `address` will be documented in this file
 
 
 ## 0.4.0 - 2021-01-21
-- bump sfneal/array-helpers min version 
 - fix use of array-helpers helper functions. 
+- bump sfneal/array-helpers min version 
+
+
+## 0.5.0 - 2021-01-28
+- cut support for php7.2 & below
+- bump sfneal/models min version to 1.0 
