@@ -3,7 +3,8 @@
 [![Packagist PHP support](https://img.shields.io/packagist/php-v/sfneal/address)](https://packagist.org/packages/sfneal/address)
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/sfneal/address.svg?style=flat-square)](https://packagist.org/packages/sfneal/address)
 [![Build Status](https://travis-ci.com/sfneal/address.svg?branch=master&style=flat-square)](https://travis-ci.com/sfneal/address)
-[![Quality Score](https://img.shields.io/scrutinizer/g/sfneal/address.svg?style=flat-square)](https://scrutinizer-ci.com/g/sfneal/address)
+[![StyleCI](https://github.styleci.io/repos/307752512/shield?branch=master)](https://github.styleci.io/repos/307752512?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sfneal/address/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sfneal/address/?branch=master)
 [![Total Downloads](https://img.shields.io/packagist/dt/sfneal/address.svg?style=flat-square)](https://packagist.org/packages/sfneal/address)
 
 Add polymorphic 'address' relationships to Eloquent Models in Laravel applications.
