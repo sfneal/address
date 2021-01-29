@@ -24,5 +24,11 @@ All notable changes to `address` will be documented in this file
 
 
 ## 0.5.0 - 2021-01-28
-- cut support for php7.2 & below
 - bump sfneal/models min version to 1.0 
+- cut support for php7.2 & below
+
+
+## 0.6.0 - 2021-01-29 (RC)
+- add tests from sfneal/builders package
+- bump min orchestra/testbench & phpunit/phpunit
+- add AddressFactory and improved test suite
