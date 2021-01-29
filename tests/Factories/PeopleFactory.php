@@ -26,10 +26,6 @@ class PeopleFactory extends Factory
             'name_last' => $this->faker->lastName,
             'email' => $this->faker->safeEmail,
             'age' => $this->faker->numberBetween(21, 70),
-            'address' => $this->faker->streetAddress,
-            'city' => $this->faker->city,
-            'state' => $this->faker->state,
-            'zip' => $this->faker->postcode,
         ];
     }
 }

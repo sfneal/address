@@ -19,7 +19,9 @@ class PeopleFactoryTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->model = $this->models->random();
+
+        // Retrieve the People model from an Address model
+        $this->model = $this->models->random()->addressable;
     }
 
     /** @test */
@@ -29,10 +31,6 @@ class PeopleFactoryTest extends TestCase
         $this->assertIsString($this->model->name_last);
         $this->assertStringContainsString('@', $this->model->email);
         $this->assertIsInt($this->model->age);
-        $this->assertIsString($this->model->address);
-        $this->assertIsString($this->model->city);
-        $this->assertIsString($this->model->state);
-        $this->assertIsString($this->model->zip);
     }
 
     /** @test */
@@ -43,13 +41,5 @@ class PeopleFactoryTest extends TestCase
         $this->assertStringContainsString(', ', $this->model->name_last_first);
         $this->assertStringContainsString($this->model->name_first, $this->model->name_full);
         $this->assertStringContainsString($this->model->name_last, $this->model->name_full);
-
-        // Address attributes
-        $this->assertIsString($this->model->address_full);
-        $this->assertStringContainsString(', ', $this->model->address_full);
-        $this->assertStringContainsString($this->model->address, $this->model->address_full);
-        $this->assertStringContainsString($this->model->city, $this->model->address_full);
-        $this->assertStringContainsString($this->model->state, $this->model->address_full);
-        $this->assertStringContainsString($this->model->zip, $this->model->address_full);
     }
 }

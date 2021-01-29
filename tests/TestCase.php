@@ -5,6 +5,7 @@ namespace Sfneal\Address\Tests;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
+use Sfneal\Address\Models\Address;
 use Sfneal\Address\Providers\AddressServiceProvider;
 use Sfneal\Address\Tests\Models\People;
 use Sfneal\Address\Tests\Providers\TestingServiceProvider;
@@ -47,8 +48,9 @@ class TestCase extends OrchestraTestCase
         parent::setUp();
 
         // Create model factories
-        $this->models = People::factory()
+        $this->models = Address::factory()
             ->count(20)
+            ->for(People::factory(), 'addressable')
             ->create();
 
         // Add custom factories
@@ -63,14 +65,22 @@ class TestCase extends OrchestraTestCase
     private static function customFactories(): array
     {
         return [
-            People::factory()->create([
-                'name_first' => 'Stephen',
-                'name_last' => 'Neal',
-            ]),
-            People::factory()->create([
-                'name_first' => 'Richard',
-                'name_last' => 'Neal',
-            ]),
+            Address::factory()
+                ->for(
+                    People::factory()->create([
+                        'name_first' => 'Stephen',
+                        'name_last' => 'Neal',
+                    ]),
+                    'addressable'
+                ),
+            People::factory()
+                ->for(
+                    People::factory()->create([
+                        'name_first' => 'Richard',
+                        'name_last' => 'Neal',
+                    ]),
+                    'address'
+                ),
         ];
     }
 

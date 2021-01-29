@@ -30,10 +30,6 @@ class People extends Model
         'name_last',
         'email',
         'age',
-        'address',
-        'city',
-        'state',
-        'zip',
     ];
 
     /**
@@ -85,11 +81,6 @@ class People extends Model
     public function getNameLastFirstAttribute(): string
     {
         return "{$this->name_last}, {$this->name_first}";
-    }
-
-    public function getAddressFullAttribute(): string
-    {
-        return "{$this->address}, {$this->city}, {$this->state} {$this->zip}";
     }
 
     public function getAgeAttribute($value): int

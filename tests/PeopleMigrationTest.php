@@ -14,11 +14,7 @@ class PeopleMigrationTest extends TestCase
         $person->name_first = 'Johnny';
         $person->name_last = 'Tsunami';
         $person->email = 'johnny.tsunami@example.com';
-        $person->age = 22;
-        $person->address = '123 Main Street';
-        $person->city = 'Honolulu';
-        $person->state = 'HI';
-        $person->zip = '96795';
+        $person->age = 22;;
         $person->save();
 
         // Retrieve the new Address
@@ -29,9 +25,5 @@ class PeopleMigrationTest extends TestCase
         $this->assertSame($newPerson->name_last, 'Tsunami');
         $this->assertSame($newPerson->email, 'johnny.tsunami@example.com');
         $this->assertSame($newPerson->age, 22);
-        $this->assertSame($newPerson->address, '123 Main Street');
-        $this->assertSame($newPerson->city, 'Honolulu');
-        $this->assertSame($newPerson->state, 'HI');
-        $this->assertSame($newPerson->zip, '96795');
     }
 }
