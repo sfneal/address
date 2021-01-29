@@ -15,7 +15,7 @@ class TestCase extends OrchestraTestCase
     use RefreshDatabase;
 
     /**
-     * @var People|Collection
+     * @var Address|Collection
      */
     public $models;
 
