@@ -23,7 +23,7 @@ class TestCase extends OrchestraTestCase
     {
         return [
             TestingServiceProvider::class,
-            AddressServiceProvider::class
+            AddressServiceProvider::class,
         ];
     }
 
