@@ -15,7 +15,7 @@ class MigrationsTest extends TestCase
         $person->name_first = 'Johnny';
         $person->name_last = 'Tsunami';
         $person->email = 'johnny.tsunami@example.com';
-        $person->age = 22;;
+        $person->age = 22;
         $person->save();
 
         // Retrieve the new Address
