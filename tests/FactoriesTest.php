@@ -21,7 +21,7 @@ class FactoriesTest extends TestCase
         parent::setUp();
 
         // Retrieve the People model from an Address model
-        $this->model = $this->models->random();
+        $this->model = Address::query()->get()->shuffle()->first();
     }
 
     /** @test */

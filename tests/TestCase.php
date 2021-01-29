@@ -2,7 +2,6 @@
 
 namespace Sfneal\Address\Tests;
 
-use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 use Sfneal\Address\Models\Address;
@@ -13,11 +12,6 @@ use Sfneal\Address\Tests\Providers\TestingServiceProvider;
 class TestCase extends OrchestraTestCase
 {
     use RefreshDatabase;
-
-    /**
-     * @var Address|Collection
-     */
-    public $models;
 
     protected function getPackageProviders($app)
     {
@@ -48,51 +42,9 @@ class TestCase extends OrchestraTestCase
         parent::setUp();
 
         // Create model factories
-        $this->models = Address::factory()
+        Address::factory()
             ->count(20)
             ->for(People::factory(), 'addressable')
             ->create();
-
-        // Add custom factories
-        $this->addCustomFactories();
-    }
-
-    /**
-     * Add custom Factories to the model Collection.
-     *
-     * @return array
-     */
-    private static function customFactories(): array
-    {
-        return [
-            Address::factory()
-                ->for(
-                    People::factory()->create([
-                        'name_first' => 'Stephen',
-                        'name_last' => 'Neal',
-                    ]),
-                    'addressable'
-                ),
-            People::factory()
-                ->for(
-                    People::factory()->create([
-                        'name_first' => 'Richard',
-                        'name_last' => 'Neal',
-                    ]),
-                    'address'
-                ),
-        ];
-    }
-
-    /**
-     * Add custom factories to the Model Collection.
-     *
-     * @return void
-     */
-    private function addCustomFactories(): void
-    {
-        foreach (self::customFactories() as $factory) {
-            $this->models->add($factory);
-        }
     }
 }
