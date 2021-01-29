@@ -5,6 +5,8 @@ namespace Sfneal\Address\Tests\Models;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\MorphOne;
+use Sfneal\Address\Models\Address;
 use Sfneal\Builders\QueryBuilder;
 use Sfneal\Address\Tests\Factories\PeopleFactory;
 
@@ -63,6 +65,16 @@ class People extends Model
     public static function query()
     {
         return parent::query();
+    }
+
+    /**
+     * User's address.
+     *
+     * @return MorphOne|Address
+     */
+    public function address()
+    {
+        return $this->morphOne(Address::class, 'addressable');
     }
 
     public function getNameFullAttribute(): string

@@ -33,7 +33,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Sfneal\\Address\\": "src"
+            "Sfneal\\Address\\": "src",
+            "Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {

@@ -2,7 +2,9 @@
 
 namespace Sfneal\Address\Models;
 
+use Database\Factories\AddressFactory;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Sfneal\Address\Builders\AddressBuilder;
 use Sfneal\Helpers\Arrays\ArrayHelpers;
 use Sfneal\Helpers\Strings\StringHelpers;
@@ -12,6 +14,7 @@ use Sfneal\Models\Traits\CityStateAccessors;
 class Address extends AbstractModel
 {
     use CityStateAccessors;
+    use HasFactory;
 
     protected $table = 'address';
     protected $primaryKey = 'address_id';
@@ -27,6 +30,16 @@ class Address extends AbstractModel
         'addressable_id',
         'addressable_type',
     ];
+
+    /**
+     * Model Factory.
+     *
+     * @return AddressFactory
+     */
+    protected static function newFactory(): AddressFactory
+    {
+        return new AddressFactory();
+    }
 
     /**
      * Query Builder.
