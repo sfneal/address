@@ -28,7 +28,8 @@ All notable changes to `address` will be documented in this file
 - cut support for php7.2 & below
 
 
-## 0.6.0 - 2021-01-29 (RC)
+## 1.0.0 - 2021-01-29
 - add tests from sfneal/builders package
 - bump min orchestra/testbench & phpunit/phpunit
 - add AddressFactory and improved test suite
+- update documentation
