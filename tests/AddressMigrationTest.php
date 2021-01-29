@@ -2,24 +2,10 @@
 
 namespace Sfneal\Address\Tests;
 
-use Orchestra\Testbench\TestCase;
 use Sfneal\Address\Models\Address;
-use Sfneal\Address\Providers\AddressServiceProvider;
 
 class AddressMigrationTest extends TestCase
 {
-    protected function getPackageProviders($app)
-    {
-        return AddressServiceProvider::class;
-    }
-
-    protected function getEnvironmentSetUp($app)
-    {
-        include_once __DIR__.'/../database/migrations/create_address_table.php.stub';
-
-        (new \CreateAddressTable())->up();
-    }
-
     /** @test */
     public function it_can_access_the_database()
     {
