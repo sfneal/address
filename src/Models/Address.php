@@ -76,12 +76,13 @@ class Address extends AbstractModel
     /**
      * Retrieve an html block to display an address.
      *
+     * @param bool $withType include the address type
      * @return string
      */
-    public function show()
+    public function show(bool $withType = true): string
     {
         $string = '';
-        if ($this->type) {
+        if ($withType && $this->type) {
             $string .= '<small><b>'.ucfirst($this->type).' Address:</b></small><br>';
         }
         if ($this->address_1) {
