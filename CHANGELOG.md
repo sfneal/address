@@ -33,3 +33,8 @@ All notable changes to `address` will be documented in this file
 - bump min orchestra/testbench & phpunit/phpunit
 - add AddressFactory and improved test suite
 - update documentation
+
+
+## 1.0.1 - 2021-03-08
+- add type hinting to attribute mutator methods
+- add $withType param to Address::show() method so that the address type doesn't have to be returned with the string
