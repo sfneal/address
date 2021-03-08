@@ -102,8 +102,9 @@ class Address extends AbstractModel
      * Set the 'address_1' attribute.
      *
      * @param $value
+     * @return void
      */
-    public function setAddress1Attribute($value)
+    public function setAddress1Attribute($value): void
     {
         $this->attributes['address_1'] = (strlen(trim($value)) > 0) ? trim($value) : null;
     }
@@ -112,8 +113,9 @@ class Address extends AbstractModel
      * Set the 'address_2' attribute.
      *
      * @param $value
+     * @return void
      */
-    public function setAddress2Attribute($value)
+    public function setAddress2Attribute($value): void
     {
         $this->attributes['address_2'] = (strlen(trim($value)) > 0) ? trim($value) : null;
     }
@@ -122,8 +124,9 @@ class Address extends AbstractModel
      * Parse city attribute into city and state values.
      *
      * @param $value
+     * @return void
      */
-    public function setCityAttribute($value)
+    public function setCityAttribute($value): void
     {
         if (isset($value) && (new StringHelpers($value))->inString(',')) {
             [$city, $state] = explode(',', $value);
@@ -138,8 +141,9 @@ class Address extends AbstractModel
      * Set the 'state' attribute value.
      *
      * @param $value
+     * @return void
      */
-    public function setStateAttribute($value)
+    public function setStateAttribute($value): void
     {
         // Check to see if a zip value was accidentally given
         if ((new ArrayHelpers(
@@ -163,8 +167,9 @@ class Address extends AbstractModel
      * Set the 'zip' attribute.
      *
      * @param $value
+     * @return void
      */
-    public function setZipAttribute($value)
+    public function setZipAttribute($value): void
     {
         $this->attributes['zip'] = (strlen(trim($value)) > 0) ? trim($value) : null;
     }
