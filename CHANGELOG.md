@@ -38,3 +38,7 @@ All notable changes to `address` will be documented in this file
 ## 1.0.1 - 2021-03-08
 - add type hinting to attribute mutator methods
 - add $withType param to Address::show() method so that the address type doesn't have to be returned with the string
+
+
+## 1.1.0 - 2021-04-06
+- fix sfneal/models version constraint (^1.0)
