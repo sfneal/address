@@ -5,15 +5,15 @@ namespace Sfneal\Address\Models;
 use Database\Factories\AddressFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Sfneal\Address\Builders\AddressBuilder;
 use Sfneal\Helpers\Arrays\ArrayHelpers;
 use Sfneal\Helpers\Strings\StringHelpers;
-use Sfneal\Models\AbstractModel;
+use Sfneal\Models\Model;
 use Sfneal\Models\Traits\CityStateAccessors;
 
-class Address extends AbstractModel
+class Address extends Model
 {
     use CityStateAccessors;
     use HasFactory;
@@ -66,7 +66,7 @@ class Address extends AbstractModel
     /**
      * Get the owning addressable model.
      *
-     * @return MorphTo|Model
+     * @return MorphTo|Model|EloquentModel
      */
     public function addressable()
     {
