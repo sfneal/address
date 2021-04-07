@@ -5,7 +5,7 @@ namespace Sfneal\Address\Models;
 use Database\Factories\AddressFactory;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Sfneal\Address\Builders\AddressBuilder;
 use Sfneal\Helpers\Arrays\ArrayHelpers;
@@ -66,7 +66,7 @@ class Address extends AbstractModel
     /**
      * Get the owning addressable model.
      *
-     * @return MorphTo|Model
+     * @return MorphTo|AbstractModel|EloquentModel
      */
     public function addressable()
     {

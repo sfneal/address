@@ -2,7 +2,7 @@
 
 namespace Sfneal\Address\Models\Traits;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Model as EloquentModel;
 use Sfneal\Address\Models\Address;
 
 trait SaveAddressTrait
@@ -14,7 +14,7 @@ trait SaveAddressTrait
      *
      * @param string $key Request key
      *
-     * @return Model|false
+     * @return EloquentModel|false
      */
     private function createAddress(string $key = 'address')
     {
@@ -38,7 +38,7 @@ trait SaveAddressTrait
      *
      * @param string $key
      *
-     * @return bool|false|Model|mixed
+     * @return bool|false|EloquentModel|mixed
      */
     private function createOrUpdateAddress(string $key = 'address')
     {

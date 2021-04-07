@@ -4,13 +4,13 @@ namespace Sfneal\Address\Tests\Models;
 
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\Factories\PeopleFactory;
 use Sfneal\Builders\QueryBuilder;
+use Sfneal\Models\AbstractModel;
 
-class People extends Model
+class People extends AbstractModel
 {
     use HasFactory;
 
