@@ -8,9 +8,9 @@ use Illuminate\Database\Eloquent\Relations\MorphOne;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\Factories\PeopleFactory;
 use Sfneal\Builders\QueryBuilder;
-use Sfneal\Models\AbstractModel;
+use Sfneal\Models\Model;
 
-class People extends AbstractModel
+class People extends Model
 {
     use HasFactory;
 

@@ -42,3 +42,8 @@ All notable changes to `address` will be documented in this file
 
 ## 1.1.0 - 2021-04-06
 - fix sfneal/models version constraint (^1.0)
+
+
+## 1.2.0 - 2021-04-07
+- bump min sfneal/models version to v2.0
+- refactor use of `AbstractModel` to `Model`
