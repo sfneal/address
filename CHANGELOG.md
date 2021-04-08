@@ -47,3 +47,8 @@ All notable changes to `address` will be documented in this file
 ## 1.2.0 - 2021-04-07
 - bump min sfneal/models version to v2.0
 - refactor use of `AbstractModel` to `Model`
+
+
+## 1.2.1 - 2021-04-08
+- optimize Travis CI config & enable code coverage uploading
+- bump sfneal/models min version
