@@ -33,6 +33,19 @@ class FactoriesTest extends TestCase
         $this->assertIsString($this->model->city);
         $this->assertIsString($this->model->state);
         $this->assertIsString($this->model->zip);
+        $this->assertIsString($this->model->address_full);
+    }
+
+    /** @test */
+    public function address_attributes_are_correct_types()
+    {
+        // Name attributes
+        $this->assertIsString($this->model->address_full);
+        $this->assertStringContainsString(', ', $this->model->address_full);
+        $this->assertStringContainsString($this->model->address_1, $this->model->address_full);
+        $this->assertStringContainsString($this->model->city, $this->model->address_full);
+        $this->assertStringContainsString($this->model->state, $this->model->address_full);
+        $this->assertStringContainsString($this->model->zip, $this->model->address_full);
     }
 
     /** @test */

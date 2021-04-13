@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Sfneal\Address\Models\Address;
-use Sfneal\Address\Tests\Models\People;
 
 class AddressFactory extends Factory
 {
@@ -29,8 +28,6 @@ class AddressFactory extends Factory
             'city' => $this->faker->city,
             'state' => $this->faker->state,
             'zip' => $this->faker->postcode,
-            'addressable_id' => People::factory(),
-            'addressable_type' => People::class,
         ];
     }
 }

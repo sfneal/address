@@ -52,3 +52,8 @@ All notable changes to `address` will be documented in this file
 ## 1.2.1 - 2021-04-08
 - optimize Travis CI config & enable code coverage uploading
 - bump sfneal/models min version
+
+
+## 1.2.2 - 2021-04-13
+- add `address_full` attribute to `Address` model that returns a full address string
+- fix issue with `AddressFactory` polymorphic relationship definition
