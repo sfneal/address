@@ -48,5 +48,6 @@ class MigrationsTest extends TestCase
         $this->assertSame($newAddress->city, 'Boston');
         $this->assertSame($newAddress->state, 'MA');
         $this->assertSame($newAddress->zip, '12345');
+        $this->assertSame($newAddress->address_full, '123 Main Street, Boston, MA 12345');
     }
 }

@@ -33,6 +33,7 @@ class FactoriesTest extends TestCase
         $this->assertIsString($this->model->city);
         $this->assertIsString($this->model->state);
         $this->assertIsString($this->model->zip);
+        $this->assertIsString($this->model->address_full);
     }
 
     /** @test */

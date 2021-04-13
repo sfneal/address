@@ -99,6 +99,20 @@ class Address extends Model
     }
 
     /**
+     * Retrieve the 'address_full' attribute.
+     *
+     *  - returns a full address string that includes address, city, state & zip
+     *
+     * @return string
+     */
+    public function getAddressFullAttribute(): string
+    {
+        // Include the second line address if set
+        $address = "{$this->address_1}, " . (isset($this->address_2) ? "{$this->address_2}, " : '');
+        return $address . "{$this->city}, {$this->state} {$this->zip}";
+    }
+
+    /**
      * Set the 'address_1' attribute.
      *
      * @param $value
