@@ -56,3 +56,4 @@ All notable changes to `address` will be documented in this file
 
 ## 1.2.2 - 2021-04-13
 - add `address_full` attribute to `Address` model that returns a full address string
+- fix issue with `AddressFactory` polymorphic relationship definition
