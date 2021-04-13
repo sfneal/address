@@ -37,6 +37,18 @@ class FactoriesTest extends TestCase
     }
 
     /** @test */
+    public function address_attributes_are_correct_types()
+    {
+        // Name attributes
+        $this->assertIsString($this->model->address_full);
+        $this->assertStringContainsString(', ', $this->model->address_full);
+        $this->assertStringContainsString($this->model->address_1, $this->model->address_full);
+        $this->assertStringContainsString($this->model->city, $this->model->address_full);
+        $this->assertStringContainsString($this->model->state, $this->model->address_full);
+        $this->assertStringContainsString($this->model->zip, $this->model->address_full);
+    }
+
+    /** @test */
     public function people_fillables_are_correct_types()
     {
         $this->assertIsString($this->model->addressable->name_first);
