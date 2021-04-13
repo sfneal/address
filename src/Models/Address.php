@@ -108,8 +108,9 @@ class Address extends Model
     public function getAddressFullAttribute(): string
     {
         // Include the second line address if set
-        $address = "{$this->address_1}, " . (isset($this->address_2) ? "{$this->address_2}, " : '');
-        return $address . "{$this->city}, {$this->state} {$this->zip}";
+        $address = "{$this->address_1}, ".(isset($this->address_2) ? "{$this->address_2}, " : '');
+
+        return $address."{$this->city}, {$this->state} {$this->zip}";
     }
 
     /**
