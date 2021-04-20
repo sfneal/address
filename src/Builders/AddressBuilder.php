@@ -6,6 +6,7 @@ use Sfneal\Builders\QueryBuilder;
 
 class AddressBuilder extends QueryBuilder
 {
+    // todo: add tests
     /**
      * Scope query results to Address's associated with a particular model.
      *
