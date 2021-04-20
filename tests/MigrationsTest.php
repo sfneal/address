@@ -3,7 +3,6 @@
 namespace Sfneal\Address\Tests;
 
 use Sfneal\Address\Models\Address;
-use Sfneal\Address\Tests\Models\People;
 
 class MigrationsTest extends TestCase
 {
