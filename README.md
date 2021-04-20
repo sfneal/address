@@ -17,6 +17,12 @@ You can install the package via composer:
 composer require sfneal/address
 ```
 
+To make use of database migration, publish the Service Provider.
+
+``` php
+php artisan vendor:publish --provider="Sfneal\Address\Providers\AddressServiceProvider"
+```
+
 ## Usage
 
 Add a 'address' relationship to an Eloquent Model.

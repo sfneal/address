@@ -57,3 +57,8 @@ All notable changes to `address` will be documented in this file
 ## 1.2.2 - 2021-04-13
 - add `address_full` attribute to `Address` model that returns a full address string
 - fix issue with `AddressFactory` polymorphic relationship definition
+
+
+## 1.2.3 - 2021-04-20
+- bump min sfneal/mock-models dev requirement
+- add use of sfneal/mock-models test utilities & mock models

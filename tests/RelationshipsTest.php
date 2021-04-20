@@ -2,7 +2,8 @@
 
 namespace Sfneal\Address\Tests;
 
-use Sfneal\Address\Tests\Models\People;
+use Sfneal\Address\Models\Address;
+use Sfneal\Testing\Models\People;
 
 class RelationshipsTest extends TestCase
 {
@@ -27,6 +28,7 @@ class RelationshipsTest extends TestCase
     /** @test */
     public function address_relationship_exists()
     {
-        $this->assertNotNull($this->model->relationLoaded('address'));
+        $this->assertNotNull($this->model->address);
+        $this->assertInstanceOf(Address::class, $this->model->address);
     }
 }
