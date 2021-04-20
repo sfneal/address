@@ -3,8 +3,15 @@
 namespace Sfneal\Address\Tests;
 
 use Sfneal\Address\Models\Address;
+use Sfneal\Testing\Utils\Interfaces\Factory\AttributesTest;
+use Sfneal\Testing\Utils\Interfaces\Factory\FillablesTest;
+use Sfneal\Testing\Utils\Interfaces\Factory\RelationshipAttributesTest;
+use Sfneal\Testing\Utils\Interfaces\Factory\RelationshipFillablesTest;
 
-class FactoriesTest extends TestCase
+class FactoriesTest extends TestCase implements FillablesTest,
+                                                AttributesTest,
+                                                RelationshipAttributesTest,
+                                                RelationshipFillablesTest
 {
     /**
      * @var Address
@@ -25,7 +32,7 @@ class FactoriesTest extends TestCase
     }
 
     /** @test */
-    public function address_fillables_are_correct_types()
+    public function fillables_are_correct_types()
     {
         $this->assertIsString($this->model->type);
         $this->assertIsString($this->model->address_1);
@@ -37,7 +44,7 @@ class FactoriesTest extends TestCase
     }
 
     /** @test */
-    public function address_attributes_are_correct_types()
+    public function attributes_are_correct_types()
     {
         // Name attributes
         $this->assertIsString($this->model->address_full);
@@ -49,7 +56,7 @@ class FactoriesTest extends TestCase
     }
 
     /** @test */
-    public function people_fillables_are_correct_types()
+    public function relationship_fillables_are_correct_types()
     {
         $this->assertIsString($this->model->addressable->name_first);
         $this->assertIsString($this->model->addressable->name_last);
@@ -58,7 +65,7 @@ class FactoriesTest extends TestCase
     }
 
     /** @test */
-    public function people_attributes_are_correct_types()
+    public function relationship_attributes_are_correct_types()
     {
         // Name attributes
         $this->assertIsString($this->model->addressable->name_full);
