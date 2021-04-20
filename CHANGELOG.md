@@ -59,6 +59,6 @@ All notable changes to `address` will be documented in this file
 - fix issue with `AddressFactory` polymorphic relationship definition
 
 
-## 1.2.3 - 2021-04-40
+## 1.2.3 - 2021-04-20
 - bump min sfneal/mock-models dev requirement
 - add use of sfneal/mock-models test utilities & mock models
