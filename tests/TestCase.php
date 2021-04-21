@@ -55,9 +55,9 @@ class TestCase extends OrchestraTestCase
         parent::setUp();
 
         // Create model factories
-        Address::factory()
+        People::factory()
             ->count(20)
-            ->for(People::factory(), 'addressable')
+            ->has(Address::factory())
             ->create();
     }
 }
