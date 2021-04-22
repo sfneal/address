@@ -24,7 +24,7 @@
         "orchestra/testbench": ">=6.7.1",
         "phpunit/phpunit": ">=7.5.20",
         "scrutinizer/ocular": "^1.8",
-        "sfneal/mock-models": ">=0.2.2"
+        "sfneal/mock-models": "dev-dev"
     },
     "extra": {
         "laravel": {
