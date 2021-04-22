@@ -6,8 +6,8 @@ cache:
 
 env:
     matrix:
-        - COMPOSER_FLAGS="--prefer-lowest -W"
-        - COMPOSER_FLAGS=" -W"
+        - COMPOSER_FLAGS="--prefer-lowest"
+        - COMPOSER_FLAGS=""
 
 jobs:
     allow_failures:
