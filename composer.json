@@ -15,6 +15,7 @@
             "role": "Developer"
         }
     ],
+    "version": "1.2.4",
     "require": {
         "php": ">=7.3",
         "sfneal/models": "^2.2",
