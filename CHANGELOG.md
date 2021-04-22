@@ -67,3 +67,4 @@ All notable changes to `address` will be documented in this file
 ## 1.2.4 - 2021-04-22
 - fix model factory creation to create 20 `People` each with an `Address`
 - fix `addressable()` method return type hinting
+- fix issues with sfneal/mock-models dev requirement
