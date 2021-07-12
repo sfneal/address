@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Address\Tests\Feature;
-
 
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\TestCase;
@@ -17,7 +15,7 @@ class AddressMutatorsTest extends TestCase
         $address = Address::query()->find($address_id);
 
         $address->update([
-            'city' => 'Boston, MA'
+            'city' => 'Boston, MA',
         ]);
 
         $updatedAddress = Address::query()->find($address_id);
