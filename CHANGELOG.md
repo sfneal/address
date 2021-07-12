@@ -68,3 +68,10 @@ All notable changes to `address` will be documented in this file
 - fix model factory creation to create 20 `People` each with an `Address`
 - fix `addressable()` method return type hinting
 - fix issues with sfneal/mock-models dev requirement
+
+
+## 1.2.5 - 2021-07-12
+- refactor test classes to `Feature` test namespace
+- make `AddressTest` unit test for testing the `Address` model
+- make `AddressBuilderTest` & add sfneal/datum to dev requirements
+- make `AddressMutatorsTest` for testing setting city, state pairs
