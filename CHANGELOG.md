@@ -75,3 +75,4 @@ All notable changes to `address` will be documented in this file
 - make `AddressTest` unit test for testing the `Address` model
 - make `AddressBuilderTest` & add sfneal/datum to dev requirements
 - make `AddressMutatorsTest` for testing setting city, state pairs
+- bump min sfneal/mock-models composer package version to v0.6
