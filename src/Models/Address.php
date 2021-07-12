@@ -145,7 +145,7 @@ class Address extends Model
         if (isset($value) && (new StringHelpers($value))->inString(',')) {
             [$city, $state] = explode(',', $value);
             $this->attributes['city'] = ucfirst(trim($city));
-            $this->setStateAttribute($state);
+            $this->setStateAttribute(trim($state));
         } else {
             $this->attributes['city'] = ucfirst(trim($value));
         }
