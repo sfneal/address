@@ -15,7 +15,7 @@
             "role": "Developer"
         }
     ],
-    "version": "1.2.4",
+    "version": "1.2.5",
     "require": {
         "php": ">=7.3",
         "sfneal/models": "^2.2",
@@ -25,7 +25,8 @@
         "orchestra/testbench": ">=6.7.1",
         "phpunit/phpunit": ">=7.5.20",
         "scrutinizer/ocular": "^1.8",
-        "sfneal/mock-models": ">=0.2.2"
+        "sfneal/mock-models": ">=0.6",
+        "sfneal/datum": ">=1.4.1"
     },
     "extra": {
         "laravel": {
