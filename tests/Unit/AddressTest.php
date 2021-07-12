@@ -1,8 +1,6 @@
 <?php
 
-
 namespace Sfneal\Address\Tests\Unit;
-
 
 use Database\Factories\AddressFactory;
 use Sfneal\Address\Builders\AddressBuilder;
