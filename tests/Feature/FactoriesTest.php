@@ -1,8 +1,9 @@
 <?php
 
-namespace Sfneal\Address\Tests;
+namespace Sfneal\Address\Tests\Feature;
 
 use Sfneal\Address\Models\Address;
+use Sfneal\Address\Tests\TestCase;
 use Sfneal\Testing\Utils\Interfaces\Factory\AttributesTest;
 use Sfneal\Testing\Utils\Interfaces\Factory\FillablesTest;
 use Sfneal\Testing\Utils\Interfaces\Factory\RelationshipAttributesTest;

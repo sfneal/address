@@ -1,8 +1,9 @@
 <?php
 
-namespace Sfneal\Address\Tests;
+namespace Sfneal\Address\Tests\Feature;
 
 use Sfneal\Address\Models\Address;
+use Sfneal\Address\Tests\TestCase;
 
 class MigrationsTest extends TestCase
 {
