@@ -76,3 +76,7 @@ All notable changes to `address` will be documented in this file
 - make `AddressBuilderTest` & add sfneal/datum to dev requirements
 - make `AddressMutatorsTest` for testing setting city, state pairs
 - bump min sfneal/mock-models composer package version to v0.6
+
+
+## 1.2.6 - 2021-07-16
+- fix issue with `AddressServiceProvider` database migration path
