@@ -15,7 +15,7 @@
             "role": "Developer"
         }
     ],
-    "version": "1.2.5",
+    "version": "1.2.7",
     "require": {
         "php": ">=7.3",
         "sfneal/array-helpers": "^1.3",
