@@ -80,3 +80,8 @@ All notable changes to `address` will be documented in this file
 
 ## 1.2.6 - 2021-07-16
 - fix issue with `AddressServiceProvider` database migration path
+
+ 
+## 1.2.7 - 2021-07-30
+- add sfneal/array-helpers explicit composer requirement (previously was indirectly required by sfneal/string-helpers)
+- fix sfneal/string-helpers dependency to prevent v2.0 upgrades
