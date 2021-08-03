@@ -167,7 +167,7 @@ class Address extends Model
                     return is_int($char);
                 })
                 ->toArray()
-        ))->arrayValuesEqual(true)) {
+        ))->valuesEqual(true)) {
             $attribute = 'zip';
         } else {
             $attribute = 'state';
