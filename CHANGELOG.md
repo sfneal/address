@@ -90,3 +90,7 @@ All notable changes to `address` will be documented in this file
 ## 1.2.8 - 2021-07-30
 - fix issue with sfneal/mock-models package interdependency
 - bump sfneal/mock-models composer dev requirement min version to v0.8 
+
+
+## 1.2.9 - 2021-08-03
+- bump min sfneal/array-helpers version to v2.0 & refactor use
