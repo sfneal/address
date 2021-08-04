@@ -94,3 +94,7 @@ All notable changes to `address` will be documented in this file
 
 ## 1.2.9 - 2021-08-03
 - bump min sfneal/array-helpers version to v2.0 & refactor use
+
+
+## 1.2.10 - 2021-08-04
+- bump min sfneal/array-helpers version to v3.0 & refactor use
