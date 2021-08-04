@@ -160,14 +160,14 @@ class Address extends Model
     public function setStateAttribute($value): void
     {
         // Check to see if a zip value was accidentally given
-        if ((new ArrayHelpers(
+        if (ArrayHelpers::from(
             collect(str_split($value))
                 ->take(2)
                 ->map(function ($char) {
                     return is_int($char);
                 })
                 ->toArray()
-        ))->valuesEqual(true)) {
+        )->valuesEqual(true)) {
             $attribute = 'zip';
         } else {
             $attribute = 'state';
