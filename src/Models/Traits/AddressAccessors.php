@@ -5,11 +5,21 @@ namespace Sfneal\Address\Models\Traits;
 trait AddressAccessors
 {
     /**
+     * Get the 'city_state' attribute.
+     *
+     * @return null|string
+     */
+    public function getCityStateAttribute(): ?string
+    {
+        return $this->address->city_state ?? null;
+    }
+
+    /**
      * Retrieve the User's 'address1' attribute.
      *
-     * @return mixed
+     * @return null|string
      */
-    public function getAddress1Attribute()
+    public function getAddress1Attribute(): ?string
     {
         return $this->address->address_1 ?? null;
     }
@@ -17,9 +27,9 @@ trait AddressAccessors
     /**
      * Retrieve the User's 'address2' attribute.
      *
-     * @return mixed
+     * @return null|string
      */
-    public function getAddress2Attribute()
+    public function getAddress2Attribute(): ?string
     {
         return $this->address->address_2 ?? null;
     }
@@ -27,9 +37,9 @@ trait AddressAccessors
     /**
      * Retrieve the User's 'city' attribute.
      *
-     * @return mixed
+     * @return null|string
      */
-    public function getCityAttribute()
+    public function getCityAttribute(): ?string
     {
         return $this->address->city ?? null;
     }
@@ -37,9 +47,9 @@ trait AddressAccessors
     /**
      * Retrieve the User's 'state' attribute.
      *
-     * @return mixed
+     * @return null|string
      */
-    public function getStateAttribute()
+    public function getStateAttribute(): ?string
     {
         return $this->address->state ?? null;
     }
@@ -47,9 +57,9 @@ trait AddressAccessors
     /**
      * Retrieve the User's 'zip' attribute.
      *
-     * @return mixed
+     * @return null|string
      */
-    public function getZipAttribute()
+    public function getZipAttribute(): ?string
     {
         return $this->address->zip ?? null;
     }
