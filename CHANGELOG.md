@@ -100,6 +100,10 @@ All notable changes to `address` will be documented in this file
 - bump min sfneal/array-helpers version to v3.0 & refactor use 
  
 
-## 1.2.11 - 2021-09-01
+## 1.2.11 - 2021-09-02
 - add use of dataProviders for testing `AddressBuilder::whereAddressLike()` method
 - add `whereAddressLike()` test method to `AddressBuilderTest`
+
+
+## 1.2.12 - 2021-09-02
+- make `AddressAccessors` model trait that adds 'address' model relationship accessors ('address_1', 'city', etc...)
