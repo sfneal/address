@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\MorphTo;
 use Sfneal\Address\Builders\AddressBuilder;
+use Sfneal\Address\Models\Traits\CityStateAccessors;
 use Sfneal\Helpers\Arrays\ArrayHelpers;
 use Sfneal\Helpers\Strings\StringHelpers;
 use Sfneal\Models\Model;
-use Sfneal\Models\Traits\CityStateAccessors;
 
 class Address extends Model
 {
