@@ -3,6 +3,8 @@
 namespace Sfneal\Address\Models\Traits;
 
 
+use Sfneal\Helpers\Strings\StringHelpers;
+
 trait CityStateAccessors
 {
     /**
