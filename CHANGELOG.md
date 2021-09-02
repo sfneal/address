@@ -97,4 +97,9 @@ All notable changes to `address` will be documented in this file
 
 
 ## 1.2.10 - 2021-08-04
-- bump min sfneal/array-helpers version to v3.0 & refactor use
+- bump min sfneal/array-helpers version to v3.0 & refactor use 
+ 
+
+## 1.2.11 - 2021-09-01
+- add use of dataProviders for testing `AddressBuilder::whereAddressLike()` method
+- add `whereAddressLike()` test method to `AddressBuilderTest`
