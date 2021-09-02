@@ -107,3 +107,7 @@ All notable changes to `address` will be documented in this file
 
 ## 1.2.12 - 2021-09-02
 - make `AddressAccessors` model trait that adds 'address' model relationship accessors ('address_1', 'city', etc...)
+ 
+ 
+## 1.2.13 - 2021-09-02
+- make `CityStateAccessors` trait (imported from sfneal/models) & add use in `Address` model
