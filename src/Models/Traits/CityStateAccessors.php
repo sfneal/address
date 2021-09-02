@@ -2,7 +2,6 @@
 
 namespace Sfneal\Address\Models\Traits;
 
-
 trait CityStateAccessors
 {
     /**
