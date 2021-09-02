@@ -53,7 +53,7 @@ class AddressBuilderTest extends TestCase
                     'city' => 'New York',
                     'state' => 'NY',
                     'zip' => '10065',
-                ]
+                ],
             ],
 
             [
@@ -62,7 +62,7 @@ class AddressBuilderTest extends TestCase
                     'city' => 'Boston',
                     'state' => 'MA',
                     'zip' => '02892',
-                ]
+                ],
             ],
 
             [
@@ -71,7 +71,7 @@ class AddressBuilderTest extends TestCase
                     'city' => 'Chicago',
                     'state' => 'IL',
                     'zip' => '29301',
-                ]
+                ],
             ],
         ];
     }
