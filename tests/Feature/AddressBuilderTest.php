@@ -19,19 +19,15 @@ class AddressBuilderTest extends TestCase
         $this->assertContains($value, $model->pluck($attribute));
     }
 
-    /** @test  */
-    public function whereAddressLike()
+    /**
+     * @test
+     * @dataProvider whereAddressLikeProvider
+     */
+    public function whereAddressLike(array $attributes)
     {
-        $attributes = [
-            'address_1' => '525 Park Ave',
-            'city' => 'New York',
-            'state' => 'NY',
-            'zip' => '10065',
-        ];
         $model = Address::factory()->create($attributes);
 
-        $search = '525 Park Ave';
-        $query = Address::query()->whereAddressLike($search);
+        $query = Address::query()->whereAddressLike($attributes['address_1']);
         $resultModel = $query->get()->first();
         $resultAttributes = $query->get(array_keys($attributes))->first()->toArray();
 
@@ -41,5 +37,42 @@ class AddressBuilderTest extends TestCase
         $this->assertNotNull($resultAttributes);
         $this->assertIsArray($resultAttributes);
         $this->assertEquals($attributes, $resultAttributes);
+    }
+
+    /**
+     * Retrieve an array of Address model attributes to use to create models.
+     *
+     * @return array[]
+     */
+    public function whereAddressLikeProvider(): array
+    {
+        return [
+            [
+                [
+                    'address_1' => '525 Park Ave',
+                    'city' => 'New York',
+                    'state' => 'NY',
+                    'zip' => '10065',
+                ]
+            ],
+
+            [
+                [
+                    'address_1' => '420 Broadway St',
+                    'city' => 'Boston',
+                    'state' => 'MA',
+                    'zip' => '02892',
+                ]
+            ],
+
+            [
+                [
+                    'address_1' => '134 Main St',
+                    'city' => 'Chicago',
+                    'state' => 'IL',
+                    'zip' => '29301',
+                ]
+            ],
+        ];
     }
 }
