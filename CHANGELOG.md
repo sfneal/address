@@ -122,3 +122,7 @@ All notable changes to `address` will be documented in this file
 - cut support for PHP 7
 - add support for PHP 8.1, 8.2 & 8.3
 - bump test suite dependencies to latest installable versions
+
+
+## 2.0.2 - 2024-04-01
+- bump composer dependencies to latest versions
