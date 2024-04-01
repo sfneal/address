@@ -116,3 +116,7 @@ All notable changes to `address` will be documented in this file
 ## 2.0.0 - 2024-04-01
 - bump sfneal/models to v3.0
 - add support for GH actions
+
+
+## 2.0.1 - 2024-04-01
+- cut support for PHP 7
