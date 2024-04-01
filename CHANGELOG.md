@@ -111,3 +111,8 @@ All notable changes to `address` will be documented in this file
  
 ## 1.2.13 - 2021-09-02
 - make `CityStateAccessors` trait (imported from sfneal/models) & add use in `Address` model
+
+
+## 2.0.0 - 2024-04-01
+- bump sfneal/models to v3.0
+- add support for GH actions
