@@ -12,8 +12,7 @@ trait SaveAddressTrait
     /**
      * Create a new Address related to the Model.
      *
-     * @param string $key Request key
-     *
+     * @param  string  $key  Request key
      * @return EloquentModel|false
      */
     private function createAddress(string $key = 'address')
@@ -24,8 +23,7 @@ trait SaveAddressTrait
     /**
      * Update an existing Address relationship.
      *
-     * @param string $key
-     *
+     * @param  string  $key
      * @return mixed
      */
     private function updateAddress(string $key = 'address')
@@ -36,8 +34,7 @@ trait SaveAddressTrait
     /**
      * Create or update an Address model depending on if the relationship already exists.
      *
-     * @param string $key
-     *
+     * @param  string  $key
      * @return bool|false|EloquentModel|mixed
      */
     private function createOrUpdateAddress(string $key = 'address')
