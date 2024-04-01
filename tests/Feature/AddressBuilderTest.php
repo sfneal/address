@@ -45,7 +45,7 @@ class AddressBuilderTest extends TestCase
      *
      * @return array[]
      */
-    public function whereAddressLikeProvider(): array
+    public static function whereAddressLikeProvider(): array
     {
         return [
             [
