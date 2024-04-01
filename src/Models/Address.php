@@ -45,8 +45,7 @@ class Address extends Model
     /**
      * Query Builder.
      *
-     * @param $query
-     *
+     * @param  $query
      * @return AddressBuilder
      */
     public function newEloquentBuilder($query)
@@ -75,7 +74,7 @@ class Address extends Model
     /**
      * Retrieve an html block to display an address.
      *
-     * @param bool $withType include the address type
+     * @param  bool  $withType  include the address type
      * @return string
      */
     public function show(bool $withType = true): string
@@ -115,7 +114,7 @@ class Address extends Model
     /**
      * Set the 'address_1' attribute.
      *
-     * @param $value
+     * @param  $value
      * @return void
      */
     public function setAddress1Attribute($value): void
@@ -126,7 +125,7 @@ class Address extends Model
     /**
      * Set the 'address_2' attribute.
      *
-     * @param $value
+     * @param  $value
      * @return void
      */
     public function setAddress2Attribute($value): void
@@ -137,7 +136,7 @@ class Address extends Model
     /**
      * Parse city attribute into city and state values.
      *
-     * @param $value
+     * @param  $value
      * @return void
      */
     public function setCityAttribute($value): void
@@ -154,7 +153,7 @@ class Address extends Model
     /**
      * Set the 'state' attribute value.
      *
-     * @param $value
+     * @param  $value
      * @return void
      */
     public function setStateAttribute($value): void
@@ -180,7 +179,7 @@ class Address extends Model
     /**
      * Set the 'zip' attribute.
      *
-     * @param $value
+     * @param  $value
      * @return void
      */
     public function setZipAttribute($value): void

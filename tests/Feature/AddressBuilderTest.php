@@ -21,6 +21,7 @@ class AddressBuilderTest extends TestCase
 
     /**
      * @test
+     *
      * @dataProvider whereAddressLikeProvider
      */
     public function whereAddressLike(array $attributes)

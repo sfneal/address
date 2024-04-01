@@ -9,10 +9,9 @@ class AddressBuilder extends QueryBuilder
     /**
      * Scope query results to Address's associated with a particular model.
      *
-     * @param string $addressableType
-     * @param string $operator
-     * @param string $boolean
-     *
+     * @param  string  $addressableType
+     * @param  string  $operator
+     * @param  string  $boolean
      * @return $this
      */
     public function whereType(string $addressableType, string $operator = '=', string $boolean = 'and'): self
@@ -25,8 +24,7 @@ class AddressBuilder extends QueryBuilder
     /**
      * Use a 'wildcard' like search to several attributes for a match.
      *
-     * @param string $search
-     *
+     * @param  string  $search
      * @return $this
      */
     public function whereAddressLike(string $search): self
