@@ -33,7 +33,7 @@ class Address extends Model
     ];
 
     protected $appends = [
-        'address_full'
+        'address_full',
     ];
 
     /**
