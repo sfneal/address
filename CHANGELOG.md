@@ -131,3 +131,4 @@ All notable changes to `address` will be documented in this file
 ## 3.0.0 - 2024-05-02
 - add new gh actions
 - fix issues raised by static analysis
+- add support for Laravel v11
