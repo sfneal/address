@@ -37,6 +37,10 @@ class AddressBuilderTest extends TestCase
         $this->assertEquals($model->getKey(), $resultModel->getKey());
         $this->assertNotNull($resultAttributes);
         $this->assertIsArray($resultAttributes);
+
+        // remove the appended 'address_full' attribute from results
+        unset($resultAttributes['address_full']);
+
         $this->assertEquals($attributes, $resultAttributes);
     }
 

@@ -32,6 +32,10 @@ class Address extends Model
         'addressable_type',
     ];
 
+    protected $appends = [
+        'address_full'
+    ];
+
     /**
      * Model Factory.
      *
@@ -101,10 +105,14 @@ class Address extends Model
      *
      *  - returns a full address string that includes address, city, state & zip
      *
-     * @return string
+     * @return string|null
      */
-    public function getAddressFullAttribute(): string
+    public function getAddressFullAttribute(): ?string
     {
+        if (! array_key_exists('address_1', $this->attributes)) {
+            return null;
+        }
+
         // Include the second line address if set
         $address = "{$this->attributes['address_1']}, ".(isset($this->attributes['address_2']) ? "{$this->attributes['address_2']}, " : '');
 

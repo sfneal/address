@@ -66,9 +66,9 @@ class FactoriesTest extends TestCase implements FillablesTest, AttributesTest, R
     public function relationship_attributes_are_correct_types()
     {
         // Name attributes
-        $this->assertIsString($this->model->addressable->name_full);
-        $this->assertStringContainsString(', ', $this->model->addressable->name_last_first);
-        $this->assertStringContainsString($this->model->addressable->name_first, $this->model->addressable->name_full);
-        $this->assertStringContainsString($this->model->addressable->name_last, $this->model->addressable->name_full);
+        $this->assertIsString($this->model->addressable->getNameFullAttribute());
+        $this->assertStringContainsString(', ', $this->model->addressable->getNameLastFirstAttribute());
+        $this->assertStringContainsString($this->model->addressable->name_first, $this->model->addressable->getNameFullAttribute());
+        $this->assertStringContainsString($this->model->addressable->name_last, $this->model->addressable->getNameFullAttribute());
     }
 }
