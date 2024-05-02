@@ -18,7 +18,7 @@
     "require": {
         "php": "^8.0",
         "sfneal/array-helpers": "^3.0",
-        "sfneal/models": "^3.0",
+        "sfneal/models": "^3.0|^4.0",
         "sfneal/string-helpers": "^1.0"
     },
     "require-dev": {
