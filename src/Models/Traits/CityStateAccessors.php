@@ -11,9 +11,9 @@ trait CityStateAccessors
      *
      * @return string
      */
-    public function getCityStateAttribute()
+    public function getCityStateAttribute(): string
     {
-        return StringHelpers::implodeFiltered(', ', [$this->city, $this->state]);
+        return StringHelpers::implodeFiltered(', ', [$this->attributes['city'], $this->attributes['state']]);
     }
 
     /**
@@ -21,8 +21,8 @@ trait CityStateAccessors
      *
      * @return string
      */
-    public function getCityStateZipAttribute()
+    public function getCityStateZipAttribute(): string
     {
-        return StringHelpers::implodeFiltered(' ', [$this->city_state, $this->zip]);
+        return StringHelpers::implodeFiltered(' ', [$this->getCityStateAttribute(), $this->attributes['zip']]);
     }
 }
