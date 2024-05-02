@@ -126,3 +126,7 @@ All notable changes to `address` will be documented in this file
 
 ## 2.0.2 - 2024-04-01
 - bump composer dependencies to latest versions
+
+
+## 3.0.0 - 2024-05-02
+- add new gh actions
