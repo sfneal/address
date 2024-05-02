@@ -2,12 +2,13 @@
 
 namespace Sfneal\Address\Tests\Feature;
 
+use PHPUnit\Framework\Attributes\Test;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\TestCase;
 
 class MigrationsTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function address_table_is_accessible()
     {
         // Save a new Address
