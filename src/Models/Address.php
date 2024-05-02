@@ -80,16 +80,16 @@ class Address extends Model
     public function show(bool $withType = true): string
     {
         $string = '';
-        if ($withType && $this->type) {
-            $string .= '<small><b>'.ucfirst($this->type).' Address:</b></small><br>';
+        if ($withType && $this->attributes['type']) {
+            $string .= '<small><b>'.ucfirst($this->attributes['type']).' Address:</b></small><br>';
         }
-        if ($this->address_1) {
-            $string .= "{$this->address_1}<br>";
+        if ($this->attributes['address_1']) {
+            $string .= "{$this->attributes['address_1']}<br>";
         }
-        if ($this->address_2) {
-            $string .= "{$this->address_2}<br>";
+        if ($this->attributes['address_2']) {
+            $string .= "{$this->attributes['address_2']}<br>";
         }
-        if ($this->city) {
+        if ($this->attributes['city']) {
             $string .= "{$this->city_state_zip}<br>";
         }
 
@@ -106,9 +106,9 @@ class Address extends Model
     public function getAddressFullAttribute(): string
     {
         // Include the second line address if set
-        $address = "{$this->address_1}, ".(isset($this->address_2) ? "{$this->address_2}, " : '');
+        $address = "{$this->attributes['address_1']}, ".(isset($this->attributes['address_2']) ? "{$this->attributes['address_2']}, " : '');
 
-        return $address."{$this->city}, {$this->state} {$this->zip}";
+        return $address."{$this->attributes['city']}, {$this->attributes['state']} {$this->attributes['zip']}";
     }
 
     /**
