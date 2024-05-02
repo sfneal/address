@@ -2,6 +2,8 @@
 
 namespace Sfneal\Address\Tests\Feature;
 
+use PHPUnit\Framework\Attributes\DataProvider;
+use PHPUnit\Framework\Attributes\Test;
 use Sfneal\Address\Builders\AddressBuilder;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\TestCase;
@@ -9,7 +11,7 @@ use Sfneal\Queries\RandomModelAttributeQuery;
 
 class AddressBuilderTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function whereType()
     {
         $attribute = 'addressable_type';
@@ -19,11 +21,8 @@ class AddressBuilderTest extends TestCase
         $this->assertContains($value, $model->pluck($attribute));
     }
 
-    /**
-     * @test
-     *
-     * @dataProvider whereAddressLikeProvider
-     */
+    #[Test]
+    #[DataProvider('whereAddressLikeProvider')]
     public function whereAddressLike(array $attributes)
     {
         $model = Address::factory()->create($attributes);
@@ -37,6 +36,10 @@ class AddressBuilderTest extends TestCase
         $this->assertEquals($model->getKey(), $resultModel->getKey());
         $this->assertNotNull($resultAttributes);
         $this->assertIsArray($resultAttributes);
+
+        // remove the appended 'address_full' attribute from results
+        unset($resultAttributes['address_full']);
+
         $this->assertEquals($attributes, $resultAttributes);
     }
 

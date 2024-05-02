@@ -3,6 +3,7 @@
 namespace Sfneal\Address\Tests\Unit;
 
 use Database\Factories\AddressFactory;
+use PHPUnit\Framework\Attributes\Test;
 use Sfneal\Address\Builders\AddressBuilder;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\TestCase;
@@ -15,7 +16,7 @@ use Sfneal\Testing\Utils\Interfaces\ModelRelationshipsTest;
 
 class AddressTest extends TestCase implements CrudModelTest, ModelBuilderTest, ModelFactoryTest, ModelRelationshipsTest
 {
-    /** @test */
+    #[Test]
     public function records_can_be_created()
     {
         $address = Address::factory()->create();
@@ -24,7 +25,7 @@ class AddressTest extends TestCase implements CrudModelTest, ModelBuilderTest, M
         $this->assertInstanceOf(Address::class, $address);
     }
 
-    /** @test */
+    #[Test]
     public function records_can_be_updated()
     {
         $data = [
@@ -52,7 +53,7 @@ class AddressTest extends TestCase implements CrudModelTest, ModelBuilderTest, M
         $this->assertSame('100 Legends Way, Boston, MA 02114', $updatedAddress->address_full);
     }
 
-    /** @test */
+    #[Test]
     public function records_can_be_deleted()
     {
         $address_id = (new RandomModelAttributeQuery(Address::class, 'address_id'))->execute();
@@ -65,7 +66,7 @@ class AddressTest extends TestCase implements CrudModelTest, ModelBuilderTest, M
         $this->assertNull(Address::query()->find($address_id));
     }
 
-    /** @test */
+    #[Test]
     public function builder_is_accessible()
     {
         $builder = Address::query();
@@ -74,7 +75,7 @@ class AddressTest extends TestCase implements CrudModelTest, ModelBuilderTest, M
         $this->assertIsString($builder->toSql());
     }
 
-    /** @test */
+    #[Test]
     public function factory_is_accessible()
     {
         $factory = Address::factory();
@@ -82,7 +83,7 @@ class AddressTest extends TestCase implements CrudModelTest, ModelBuilderTest, M
         $this->assertInstanceOf(AddressFactory::class, $factory);
     }
 
-    /** @test */
+    #[Test]
     public function relationships_are_accessible()
     {
         $address_id = (new RandomModelAttributeQuery(Address::class, 'address_id'))->execute();

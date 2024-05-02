@@ -2,13 +2,14 @@
 
 namespace Sfneal\Address\Tests\Feature;
 
+use PHPUnit\Framework\Attributes\Test;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\TestCase;
 use Sfneal\Queries\RandomModelAttributeQuery;
 
 class AddressMutatorsTest extends TestCase
 {
-    /** @test */
+    #[Test]
     public function set_city_state()
     {
         $address_id = (new RandomModelAttributeQuery(Address::class, 'address_id'))->execute();

@@ -2,6 +2,7 @@
 
 namespace Sfneal\Address\Tests\Feature;
 
+use PHPUnit\Framework\Attributes\Test;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\TestCase;
 use Sfneal\Testing\Utils\Interfaces\Factory\AttributesTest;
@@ -29,7 +30,7 @@ class FactoriesTest extends TestCase implements FillablesTest, AttributesTest, R
         $this->model = Address::query()->get()->shuffle()->first();
     }
 
-    /** @test */
+    #[Test]
     public function fillables_are_correct_types()
     {
         $this->assertIsString($this->model->type);
@@ -41,7 +42,7 @@ class FactoriesTest extends TestCase implements FillablesTest, AttributesTest, R
         $this->assertIsString($this->model->address_full);
     }
 
-    /** @test */
+    #[Test]
     public function attributes_are_correct_types()
     {
         // Name attributes
@@ -53,7 +54,7 @@ class FactoriesTest extends TestCase implements FillablesTest, AttributesTest, R
         $this->assertStringContainsString($this->model->zip, $this->model->address_full);
     }
 
-    /** @test */
+    #[Test]
     public function relationship_fillables_are_correct_types()
     {
         $this->assertIsString($this->model->addressable->name_first);
@@ -62,13 +63,13 @@ class FactoriesTest extends TestCase implements FillablesTest, AttributesTest, R
         $this->assertIsInt($this->model->addressable->age);
     }
 
-    /** @test */
+    #[Test]
     public function relationship_attributes_are_correct_types()
     {
         // Name attributes
-        $this->assertIsString($this->model->addressable->name_full);
-        $this->assertStringContainsString(', ', $this->model->addressable->name_last_first);
-        $this->assertStringContainsString($this->model->addressable->name_first, $this->model->addressable->name_full);
-        $this->assertStringContainsString($this->model->addressable->name_last, $this->model->addressable->name_full);
+        $this->assertIsString($this->model->addressable->getNameFullAttribute());
+        $this->assertStringContainsString(', ', $this->model->addressable->getNameLastFirstAttribute());
+        $this->assertStringContainsString($this->model->addressable->name_first, $this->model->addressable->getNameFullAttribute());
+        $this->assertStringContainsString($this->model->addressable->name_last, $this->model->addressable->getNameFullAttribute());
     }
 }

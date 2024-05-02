@@ -2,6 +2,7 @@
 
 namespace Sfneal\Address\Tests\Feature;
 
+use PHPUnit\Framework\Attributes\Test;
 use Sfneal\Address\Models\Address;
 use Sfneal\Address\Tests\TestCase;
 use Sfneal\Testing\Models\People;
@@ -26,7 +27,7 @@ class RelationshipsTest extends TestCase
         $this->model = People::query()->get()->shuffle()->first();
     }
 
-    /** @test */
+    #[Test]
     public function address_relationship_exists()
     {
         $this->assertNotNull($this->model->address);
