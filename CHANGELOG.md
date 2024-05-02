@@ -132,3 +132,4 @@ All notable changes to `address` will be documented in this file
 - add new gh actions
 - fix issues raised by static analysis
 - add support for Laravel v11
+- add support for sfneal/models v4.0
